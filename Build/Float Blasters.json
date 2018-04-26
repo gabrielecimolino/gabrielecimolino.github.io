@@ -1,0 +1,13 @@
+{
+"companyName": "Dead Battery Games",
+"productName": "Float Blasters",
+"dataUrl": "Float Blasters.data.unityweb",
+"asmCodeUrl": "Float Blasters.asm.code.unityweb",
+"asmMemoryUrl": "Float Blasters.asm.memory.unityweb",
+"asmFrameworkUrl": "Float Blasters.asm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}
