@@ -45,21 +45,19 @@ body {
 }
 
 .navBuffer {
-  width: 7%;
+  width: 2%;
 }
 
 .navButton {
-  width: 15%;
+  width: 13%;
   text-align: center;
 }
 
 .navLink {
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
   color: #ffe080;
-  font-size: 5vw;
+  font-size: 4vw;
   text-decoration: none;
+  text-align: center;
 }
 
 .contentArea {
@@ -91,18 +89,56 @@ body {
 .contentWrapper .contentPreview .readables .title {
   display: flex;
   margin-left: 5vw;
+  margin-top: 5vh;
   background: #323232;
   border-radius: 5px;
   align-items: center;
   height: 5vw;
 }
 .contentWrapper .contentPreview .readables .title p {
-  font-size: 3vw;
+  font-size: 4vw;
   color: #ff80e0;
+  margin-left: 1vw;
+  font-family: Restaurant;
+}
+.contentWrapper .contentPreview .readables .title .chefTitle {
+  font-size: 4vw;
+  color: #ff80e0;
+  margin-left: 0px;
 }
 .contentWrapper .contentPreview .readables .title img {
   width: 5vw;
   height: 5vw;
+}
+.contentWrapper .contentPreview .readables .preamble {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 5vw;
+  margin-left: 5vw;
+  margin-top: 2vh;
+  margin-bottom: 1vh;
+}
+.contentWrapper .contentPreview .readables .preamble .quothi {
+  display: flex;
+  height: 5vw;
+}
+.contentWrapper .contentPreview .readables .preamble .quothi div {
+  text-align: center;
+}
+.contentWrapper .contentPreview .readables .preamble .quothi div p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-family: Restaurant;
+  color: #323232;
+  font-size: 2vw;
+}
+.contentWrapper .contentPreview .readables .preamble .quothi div .highlight {
+  font-family: Restaurant;
+  font-size: 2vw;
+  color: #ff80e0;
+  margin-left: 0.5vw;
 }
 .contentWrapper .contentPreview .readables .description {
   margin-left: 5vw;
@@ -112,15 +148,52 @@ body {
   font-size: 1vw;
   font-family: Helvetica;
 }
+.contentWrapper .contentPreview .readables .description a {
+  background: #323232;
+  border-radius: 5px;
+  font-family: Restaurant;
+  color: #ff80e0;
+  text-decoration: none;
+}
+.contentWrapper .contentPreview .readables .links {
+  display: flex;
+  margin-left: 5vw;
+  margin-bottom: 3vh;
+  align-items: center;
+  justify-content: flex-start;
+  height: 2.5vw;
+}
+.contentWrapper .contentPreview .readables .links .linkButton {
+  background: #323232;
+  border-radius: 5px;
+  height: 2.5vw;
+  margin-right: 1vw;
+}
+.contentWrapper .contentPreview .readables .links .linkButton a {
+  font-family: Restaurant;
+  font-size: 2vw;
+  color: #ff80e0;
+  text-decoration: none;
+  text-align: center;
+  margin: 1vw;
+}
 .contentWrapper .contentPreview .image {
   float: right;
   width: 40%;
 }
-.contentWrapper .contentPreview .image img {
-  display: block;
-  margin: 0 auto;
-  width: 30vw;
-  height: 30vw;
+.contentWrapper .contentPreview .image .buffer {
+  display: flex;
+  background: #323232;
+  border-radius: 5px;
+  margin: 2vw 2vw 2vw 2vw;
+  width: 25vw;
+  align-items: center;
+  justify-content: center;
+}
+.contentWrapper .contentPreview .image .buffer img {
+  width: 95%;
+  height: 80%;
+  background-size: contain;
 }
 .contentWrapper .bodyHidden {
   display: none;
@@ -196,13 +269,18 @@ body {
   display: flex;
   position: relative;
   background-color: #fff;
-  border-radius: 15px;
+  border-radius: 5px;
   width: 20vw;
   height: 10vh;
   z-index: 5;
   box-shadow: 0px 20px 20px 5px rgba(132, 132, 132, 0.3);
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+}
+.musicbox .player .control-panel .artWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .musicbox .player .control-panel .album-art {
   height: 5vh;
@@ -217,10 +295,6 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 15px;
-  height: 15px;
-  background-color: #fff;
-  border-radius: 50%;
   z-index: 5;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
@@ -235,8 +309,8 @@ body {
   border-radius: 50%;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 80px;
-  background-image: url("https://i.scdn.co/image/9dcbd30dbe0c621cbaeae427cf80eff9877b4fcd");
+  background-size: 10vh;
+  background-image: url("images/Oui, Chef!! - Square.png");
 }
 .musicbox .player .control-panel.active .album-art {
   box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.2);
@@ -258,6 +332,7 @@ body {
 }
 .musicbox .player .control-panel .controls {
   display: flex;
+  align-items: center;
   justify-content: center;
   height: 10vh;
   padding: 0 15px;
@@ -276,7 +351,7 @@ body {
 .musicbox .player .control-panel .controls .trackInfo .artist p {
   margin-top: 0px;
   margin-bottom: 0px;
-  font-size: 3vw;
+  font-size: 2.5vw;
   font-family: Restaurant;
   color: #323232;
 }
@@ -288,7 +363,7 @@ body {
 .musicbox .player .control-panel .controls .trackInfo .trackName p {
   margin-top: 0px;
   margin-bottom: 0px;
-  font-size: 2vw;
+  font-size: 1.5vw;
   font-family: Helvetica;
   color: #323232;
 }
@@ -296,7 +371,7 @@ body {
 .musicbox .player .control-panel .controls .play,
 .musicbox .player .control-panel .controls .next {
   width: 5vh;
-  height: auto;
+  height: 10vh;
   border-radius: 10px;
   background-position: center center;
   background-repeat: no-repeat;
