@@ -14,7 +14,7 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: slategrey;
+  background: #ffe080;
   border-radius: 10px;
 }
 
@@ -23,13 +23,18 @@
 }
 
 body {
-  scrollbar-face-color: slategrey;
+  scrollbar-face-color: #ffe080;
   scrollbar-track-color: #323232;
 }
 
 body {
   font: 100% Helvetica, sans-serif;
   background-color: #323232;
+}
+
+.boidsCanvas {
+  position: absolute;
+  z-index: -1;
 }
 
 .navBar {
@@ -293,7 +298,7 @@ body {
   align-items: center;
   justify-content: center;
 }
-.musicbox .player .control-panel .album-art {
+.musicbox .player .control-panel .chef-album-art {
   height: 5vh;
   width: 5vh;
   border-radius: 50%;
@@ -301,7 +306,7 @@ body {
   transform: scale(1);
   transition: all 0.5s ease;
 }
-.musicbox .player .control-panel .album-art::after {
+.musicbox .player .control-panel .chef-album-art::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -310,7 +315,7 @@ body {
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
 }
-.musicbox .player .control-panel .album-art::before {
+.musicbox .player .control-panel .chef-album-art::before {
   content: "";
   position: absolute;
   top: 0;
@@ -323,12 +328,52 @@ body {
   background-size: 10vh;
   background-image: url("images/Oui, Chef!! - Square.png");
 }
-.musicbox .player .control-panel.active .album-art {
+.musicbox .player .control-panel.active .chef-album-art {
   box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.2);
   transform: scale(1.2);
   transition: all 0.5s ease;
 }
-.musicbox .player .control-panel.active .album-art::before {
+.musicbox .player .control-panel.active .chef-album-art::before {
+  animation: rotation 3s infinite linear;
+  -webkit-animation: rotation 3s infinite linear;
+  animation-fill-mode: forwards;
+}
+.musicbox .player .control-panel .bellum-album-art {
+  height: 5vh;
+  width: 5vh;
+  border-radius: 50%;
+  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0);
+  transform: scale(1);
+  transition: all 0.5s ease;
+}
+.musicbox .player .control-panel .bellum-album-art::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 5;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+.musicbox .player .control-panel .bellum-album-art::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 5vh;
+  background-image: url("images/icon.png");
+}
+.musicbox .player .control-panel.active .bellum-album-art {
+  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.2);
+  transform: scale(1.2);
+  transition: all 0.5s ease;
+}
+.musicbox .player .control-panel.active .bellum-album-art::before {
   animation: rotation 3s infinite linear;
   -webkit-animation: rotation 3s infinite linear;
   animation-fill-mode: forwards;

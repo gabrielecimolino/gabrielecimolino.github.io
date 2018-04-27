@@ -1,5 +1,3 @@
-console.clear();
-
 class musicPlayer {
 	constructor() {
 		this.play = this.play.bind(this);
