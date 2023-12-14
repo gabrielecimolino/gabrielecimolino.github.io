@@ -4,51 +4,113 @@
 @font-face {
   font-family: 'Encounters';
   src: url("fonts/SFAlienEncounters.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Cinzel';
+  src: url("fonts/Cinzel.ttf") format("truetype"); }
+
+:root
+{
+  --transparentWhite: #fafafad0;
+  --mtWhite: #fafafa;
+  --mtGray: #323232;
+  --mtPink: #ff80e0;
+  --mtYellow: #ffe080;
+  --mtGreen: #80ffe0;
+  --mtPurple: #e080ff;
+  --mtBlue: #80e0ff;
+
+  --aspectUnit: calc(1vw / 1vh);
+  --headerHeight: 10vh;
+  --separatorHeight: 2vh;
+  --borderRadius: 5px;
+
+  --shadow: 2px 2px 2px var(--mtGray);
+  --textBorder: 1px 1px 0px var(--mtGray), -1px -1px 0px var(--mtGray), 1px -1px 0px var(--mtGray), -1px 1px 0px var(--mtGray);
+}
+
 ::-webkit-scrollbar {
   width: 0.5vw;
-  height: 0.5vw; }
+  height: 0.5vw; 
+}
 
 ::-webkit-scrollbar-thumb {
-  background: #323232;
+  background: var(--transparentWhite);
   border-radius: 10px; }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #ffe080;
+  background: var(--transparentWhite);
   border-radius: 10px; }
 
 ::-webkit-scrollbar-track {
-  background: #323232; }
+  display: none; } 
 
 body {
   scrollbar-face-color: #ffe080;
   scrollbar-track-color: #323232; }
 
-body {
+body 
+{
   font: 100% Helvetica, sans-serif;
   background-color: #323232;
-  overflow-x: hidden; }
+  overflow-x: hidden; 
+  scrollbar-color: #ffffff #323232;
+}
 
-.boidsCanvas {
+.languageSelector
+{
+  display: flex;
+  flex-direction: row;
+  right: 0;
+  margin: calc(var(--headerHeight) / 20);
+}
+
+.languageSelector button
+{
+  margin: calc(var(--headerHeight) / 20);
+  width: calc(var(--headerHeight) / 2);
+  height: calc(var(--headerHeight) / 2);
+  background: var(--mtGray);
+  color: var(--mtWhite);
+  border-radius: var(--borderRadius);
+  border: solid calc(var(--headerHeight) / 40);
+  border-color: var(--mtGray);
+}
+
+.languageSelector button.selected
+{
+  background: none;
+  color: var(--mtGray);
+}
+
+.boidsCanvas 
+{
   position: fixed;
-  z-index: -1; }
+  z-index: -1;
+  top: 0;
+  left: 0; 
+}
 
 .navBar {
   display: flex;
   background-color: #80e0ff;
   position: fixed;
   width: 70vw;
-  height: 10vh;
-  margin-left: 15%;
+  height: var(--headerHeight);
+  margin-left: 15vw;
   top: 0px;
-  border-radius: 5px;
-  align-items: center;
-  justify-content: space-around; }
+  border-radius: 0 0 5px 5px;
+  align-items: center;;
+   }
 
-.navBuffer {
-  width: 2%; }
+.navButtons
+{
+  flex:1;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 3vw;
+}
 
 .navButton {
-  width: 13%;
   text-align: center; }
   .navButton svg {
     max-width: 100%;
@@ -58,33 +120,67 @@ body {
   color: #ffe080;
   font-size: 4vw;
   text-decoration: none;
+  text-shadow: var(--shadow);
   text-align: center; }
 
 .contentArea {
+  position: relative;
   display: flex;
   flex-direction: column;
+  top: 0;
   width: 70vw;
-  margin-left: 15%; }
+  margin-left: 15vw; }
+
+.contentAnchor
+{
+  position: relative;
+  top: calc(-1 * var(--headerHeight));
+  padding-bottom: var(--separatorHeight);
+}
+
+.contentTopMargin{
+  height: var(--headerHeight);
+}
 
 .contentSeparator {
-  height: 10vh; }
+  height: var(--separatorHeight); }
+
+.contentFooter {
+  font-family: Cinzel;
+  font-size: 1.5vw;
+  color: var(--transparentWhite);
+  text-align: center;
+  width: 70vw;
+  vertical-align: bottom;
+  padding-top: var(--separatorHeight);
+}
+
+.contentFooter span
+{
+  align-self: flex-end;
+  text-align: center;
+}
 
 .contentWrapper {
   display: flex;
   flex-direction: column;
   width: 100%;
-  background: #fff0e1;
+  background: var(--transparentWhite);
   border-radius: 5px; }
   .contentWrapper .contentPreview {
     display: flex;
-    align-items: center; }
-    .contentWrapper .contentPreview .readables {
+    height: 100%}
+    .contentWrapper .contentPreview .readables 
+    {
+      display: flex;
+      flex-flow: column;
+      flex: 1;
       float: left;
-      width: 60%; }
+      width: 60%; 
+      margin: 2vw 0vw 2vw 2vw;
+    }
       .contentWrapper .contentPreview .readables .title {
         display: flex;
-        margin-left: 5vw;
-        margin-top: 5vh;
         background: #323232;
         border-radius: 5px;
         align-items: center;
@@ -98,9 +194,10 @@ body {
           color: #ffe080; }
         .contentWrapper .contentPreview .readables .title p {
           font-size: 4vw;
-          color: #ff80e0;
           margin-left: 1vw;
-          font-family: Restaurant; }
+          color: #ff80e0;
+          font-family: Helvetica;
+          text-shadow: var(--shadow); }
         .contentWrapper .contentPreview .readables .title img {
           width: 5vw;
           height: 5vw; }
@@ -121,38 +218,37 @@ body {
             .contentWrapper .contentPreview .readables .preamble .quothi div p {
               margin-top: 0px;
               margin-bottom: 0px;
-              font-family: Restaurant;
+              font-family: Helvetica;
               color: #323232;
               font-size: 2vw; }
             .contentWrapper .contentPreview .readables .preamble .quothi div .highlight {
-              font-family: Restaurant;
+              font-family: Helvetica;
               font-size: 2vw;
               color: #ff80e0;
               margin-left: 0.5vw; }
       .contentWrapper .contentPreview .readables .description {
-        margin-left: 5vw; }
+        display: flex;
+        flex: 1;
+        align-items: center; }
         .contentWrapper .contentPreview .readables .description p {
           color: #323232;
-          font-size: 1vw;
+          font-size: 1.5vw;
           font-family: Helvetica; }
-        .contentWrapper .contentPreview .readables .description a {
-          background: #323232;
-          border-radius: 5px;
-          font-family: Restaurant;
-          color: #ff80e0;
-          text-decoration: none; }
+        .contentWrapper .contentPreview .readables .description a 
+        {
+          font-family: Helvetica;
+          font-size: 1.5vw;
+          color: var(--mtGray);
+          text-decoration: var(--mtGray) underline dotted;
+        }
+        .contentWrapper .contentPreview .readables .description a:hover 
+        {
+          text-decoration: var(--mtGray) underline;
+        }
       .contentWrapper .contentPreview .readables .links {
-        display: flex;
-        margin-left: 5vw;
-        margin-bottom: 3vh;
-        align-items: center;
-        justify-content: flex-start;
-        height: 2.5vw; }
+         }
         .contentWrapper .contentPreview .readables .links .linkButton {
-          background: #323232;
-          border-radius: 5px;
           height: 2.5vw;
-          margin-right: 1vw;
           display: flex;
           align-items: center; }
           .contentWrapper .contentPreview .readables .links .linkButton a.paraBellumLink {
@@ -163,12 +259,13 @@ body {
             text-align: center;
             margin: 1vw; }
           .contentWrapper .contentPreview .readables .links .linkButton a {
-            font-family: Restaurant;
+            font-family: Helvetica;
             font-size: 2vw;
-            color: #ff80e0;
-            text-decoration: none;
-            text-align: center;
-            margin: 1vw; }
+            color: var(--mtGray);
+            text-decoration: var(--mtGray) underline dotted;
+          }
+          .contentWrapper .contentPreview .readables .links .linkButton a:hover {
+            text-decoration: var(--mtGray) underline;}
     .contentWrapper .contentPreview .image {
       float: right;
       width: 40%; }
@@ -181,9 +278,11 @@ body {
         align-items: center;
         justify-content: center; }
         .contentWrapper .contentPreview .image .buffer img {
-          width: 95%;
-          height: 80%;
-          background-size: contain; }
+          width: 98%;
+          background-size: contain;
+          padding-top: 1%;
+          padding-bottom: 1%;
+          border-radius: 5px; }
   .contentWrapper .webgl-box {
     display: flex;
     justify-content: center;
@@ -208,188 +307,3 @@ body {
 .fill {
   width: 100%;
   height: 100%; }
-
-.musicbox .player .info {
-  height: 60px;
-  top: 0;
-  opacity: 0;
-  left: 10px;
-  right: 10px;
-  background-color: rgba(255, 255, 255, 0.5);
-  padding: 5px 15px 5px 110px;
-  border-radius: 15px;
-  transition: all .5s ease; }
-  .musicbox .player .info .artist,
-  .musicbox .player .info .name {
-    display: block; }
-  .musicbox .player .info .artist {
-    color: #222;
-    font-size: 16px;
-    margin-bottom: 5px; }
-  .musicbox .player .info .name {
-    color: #999;
-    font-size: 12px;
-    margin-bottom: 8px; }
-  .musicbox .player .info .progress-bar {
-    background-color: #ddd;
-    height: 2px;
-    width: 100%;
-    position: relative; }
-    .musicbox .player .info .progress-bar .bar {
-      position: absolute;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      background-color: red;
-      width: 10%;
-      transition: all .2s ease; }
-  .musicbox .player .info.active {
-    top: -60px;
-    opacity: 1;
-    transition: all .5s ease; }
-.musicbox .player .control-panel {
-  display: flex;
-  position: relative;
-  background-color: #fff;
-  border-radius: 5px;
-  width: 20vw;
-  height: 10vh;
-  z-index: 5;
-  box-shadow: 0px 20px 20px 5px rgba(132, 132, 132, 0.3);
-  justify-content: space-between;
-  align-items: center; }
-  .musicbox .player .control-panel .artWrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center; }
-  .musicbox .player .control-panel .chef-album-art {
-    height: 5vh;
-    width: 5vh;
-    border-radius: 50%;
-    box-shadow: 0px 0px 20px 5px transparent;
-    transform: scale(1);
-    transition: all .5s ease; }
-    .musicbox .player .control-panel .chef-album-art::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      z-index: 5;
-      transform: translate(-50%, -50%);
-      -webkit-transform: translate(-50%, -50%); }
-    .musicbox .player .control-panel .chef-album-art::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      border-radius: 50%;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: 10vh;
-      background-image: url("images/Oui, Chef!! - Square.png"); }
-  .musicbox .player .control-panel.active .chef-album-art {
-    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.2);
-    transform: scale(1.2);
-    transition: all .5s ease; }
-  .musicbox .player .control-panel.active .chef-album-art::before {
-    animation: rotation 3s infinite linear;
-    -webkit-animation: rotation 3s infinite linear;
-    animation-fill-mode: forwards; }
-  .musicbox .player .control-panel .bellum-album-art {
-    height: 5vh;
-    width: 5vh;
-    border-radius: 50%;
-    box-shadow: 0px 0px 20px 5px transparent;
-    transform: scale(1);
-    transition: all .5s ease; }
-    .musicbox .player .control-panel .bellum-album-art::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      z-index: 5;
-      transform: translate(-50%, -50%);
-      -webkit-transform: translate(-50%, -50%); }
-    .musicbox .player .control-panel .bellum-album-art::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      border-radius: 50%;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: 5vh;
-      background-image: url("images/icon.png"); }
-  .musicbox .player .control-panel.active .bellum-album-art {
-    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.2);
-    transform: scale(1.2);
-    transition: all .5s ease; }
-  .musicbox .player .control-panel.active .bellum-album-art::before {
-    animation: rotation 3s infinite linear;
-    -webkit-animation: rotation 3s infinite linear;
-    animation-fill-mode: forwards; }
-@keyframes rotation {
-  0% {
-    transform: rotate(0deg); }
-  100% {
-    transform: rotate(360deg); } }
-  .musicbox .player .control-panel .controls {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 10vh;
-    padding: 0 15px; }
-    .musicbox .player .control-panel .controls .trackInfo {
-      display: flex;
-      flex-direction: column;
-      width: 10vw;
-      height: 9vh; }
-      .musicbox .player .control-panel .controls .trackInfo .artist {
-        height: 5vh;
-        line-height: 5vh;
-        text-align: center; }
-        .musicbox .player .control-panel .controls .trackInfo .artist p {
-          margin-top: 0px;
-          margin-bottom: 0px;
-          font-size: 2.5vw;
-          font-family: Restaurant;
-          color: #323232; }
-      .musicbox .player .control-panel .controls .trackInfo .trackName {
-        height: 5vh;
-        line-height: 5vh;
-        text-align: center; }
-        .musicbox .player .control-panel .controls .trackInfo .trackName p {
-          margin-top: 0px;
-          margin-bottom: 0px;
-          font-size: 1.5vw;
-          font-family: Helvetica;
-          color: #323232; }
-    .musicbox .player .control-panel .controls .prev,
-    .musicbox .player .control-panel .controls .play,
-    .musicbox .player .control-panel .controls .next {
-      width: 5vh;
-      height: 10vh;
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: 20px;
-      margin-left: 1vw;
-      background-color: #fff;
-      cursor: pointer; }
-    .musicbox .player .control-panel .controls .prev:hover,
-    .musicbox .player .control-panel .controls .play:hover,
-    .musicbox .player .control-panel .controls .next:hover {
-      background-color: #fff; }
-    .musicbox .player .control-panel .controls .prev {
-      background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDI1MC40ODggMjUwLjQ4OCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjUwLjQ4OCAyNTAuNDg4OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjEyOHB4IiBoZWlnaHQ9IjEyOHB4Ij4KPGcgaWQ9IlByZXZpb3VzX3RyYWNrIj4KCTxwYXRoIHN0eWxlPSJmaWxsLXJ1bGU6ZXZlbm9kZDtjbGlwLXJ1bGU6ZXZlbm9kZDsiIGQ9Ik0yMzcuNDg0LDIyLjU4N2MtMy4yNjYsMC03LjU5MS0wLjQwMS0xMS4wNzIsMi4wMDVsLTkyLjI2NCw3Ny45MVYzNy4yNTIgICBjMC0yLjUwNywwLjA1Ny0xNC42NjYtMTMuMDA0LTE0LjY2NmMtMy4yNjUsMC03LjU5LTAuNDAxLTExLjA3MiwyLjAwNUw4LjEwNywxMTAuNjkzYy05LjY2OSw2LjY3NC03Ljk5NywxNC41NTEtNy45OTcsMTQuNTUxICAgcy0xLjY3MSw3Ljg3OCw3Ljk5NywxNC41NTFsMTAxLjk2NSw4Ni4xMDJjMy40ODIsMi40MDUsNy44MDcsMi4wMDQsMTEuMDcyLDIuMDA0YzEzLjA2MiwwLDEzLjAwNC0xMS43LDEzLjAwNC0xNC42NjZ2LTY1LjI0OSAgIGw5Mi4yNjQsNzcuOTExYzMuNDgyLDIuNDA1LDcuODA3LDIuMDA0LDExLjA3MiwyLjAwNGMxMy4wNjIsMCwxMy4wMDQtMTEuNywxMy4wMDQtMTQuNjY2VjM3LjI1MiAgIEMyNTAuNDg4LDM0Ljc0NiwyNTAuNTQ2LDIyLjU4NywyMzcuNDg0LDIyLjU4N3oiIGZpbGw9IiNjMmM2Y2YiLz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K); }
-    .musicbox .player .control-panel .controls .play {
-      background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDIzMi4xNTMgMjMyLjE1MyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjMyLjE1MyAyMzIuMTUzOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjEyOHB4IiBoZWlnaHQ9IjEyOHB4Ij4KPGcgaWQ9IlBsYXkiPgoJPHBhdGggc3R5bGU9ImZpbGwtcnVsZTpldmVub2RkO2NsaXAtcnVsZTpldmVub2RkOyIgZD0iTTIwMy43OTEsOTkuNjI4TDQ5LjMwNywyLjI5NGMtNC41NjctMi43MTktMTAuMjM4LTIuMjY2LTE0LjUyMS0yLjI2NiAgIGMtMTcuMTMyLDAtMTcuMDU2LDEzLjIyNy0xNy4wNTYsMTYuNTc4djE5OC45NGMwLDIuODMzLTAuMDc1LDE2LjU3OSwxNy4wNTYsMTYuNTc5YzQuMjgzLDAsOS45NTUsMC40NTEsMTQuNTIxLTIuMjY3ICAgbDE1NC40ODMtOTcuMzMzYzEyLjY4LTcuNTQ1LDEwLjQ4OS0xNi40NDksMTAuNDg5LTE2LjQ0OVMyMTYuNDcxLDEwNy4xNzIsMjAzLjc5MSw5OS42Mjh6IiBmaWxsPSIjYzJjNmNmIi8+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==); }
-    .musicbox .player .control-panel .controls .next {
-      background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDI1MC40ODggMjUwLjQ4OCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjUwLjQ4OCAyNTAuNDg4OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjEyOHB4IiBoZWlnaHQ9IjEyOHB4Ij4KPGcgaWQ9Ik5leHRfdHJhY2tfMiI+Cgk8cGF0aCBzdHlsZT0iZmlsbC1ydWxlOmV2ZW5vZGQ7Y2xpcC1ydWxlOmV2ZW5vZGQ7IiBkPSJNMjQyLjM4MSwxMTAuNjkzTDE0MC40MTUsMjQuNTkxYy0zLjQ4LTIuNDA2LTcuODA1LTIuMDA1LTExLjA3MS0yLjAwNSAgIGMtMTMuMDYxLDAtMTMuMDAzLDExLjctMTMuMDAzLDE0LjY2NnY2NS4yNDlsLTkyLjI2NS03Ny45MWMtMy40ODItMi40MDYtNy44MDctMi4wMDUtMTEuMDcyLTIuMDA1ICAgQy0wLjA1NywyMi41ODcsMCwzNC4yODcsMCwzNy4yNTJ2MTc1Ljk4M2MwLDIuNTA3LTAuMDU3LDE0LjY2NiwxMy4wMDQsMTQuNjY2YzMuMjY1LDAsNy41OSwwLjQwMSwxMS4wNzItMi4wMDVsOTIuMjY1LTc3LjkxICAgdjY1LjI0OWMwLDIuNTA3LTAuMDU4LDE0LjY2NiwxMy4wMDMsMTQuNjY2YzMuMjY2LDAsNy41OTEsMC40MDEsMTEuMDcxLTIuMDA1bDEwMS45NjYtODYuMTAxICAgYzkuNjY4LTYuNjc1LDcuOTk3LTE0LjU1MSw3Ljk5Ny0xNC41NTFTMjUyLjA0OSwxMTcuMzY3LDI0Mi4zODEsMTEwLjY5M3oiIGZpbGw9IiNjMmM2Y2YiLz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K); }
-  .musicbox .player .control-panel.active .controls .play {
-    background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDIzMi42NzkgMjMyLjY3OSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjMyLjY3OSAyMzIuNjc5OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjEyOHB4IiBoZWlnaHQ9IjEyOHB4Ij4KPGcgaWQ9IlBhdXNlIj4KCTxwYXRoIHN0eWxlPSJmaWxsLXJ1bGU6ZXZlbm9kZDtjbGlwLXJ1bGU6ZXZlbm9kZDsiIGQ9Ik04MC41NDMsMEgzNS43OTdjLTkuODg1LDAtMTcuODk4LDguMDE0LTE3Ljg5OCwxNy44OTh2MTk2Ljg4MyAgIGMwLDkuODg1LDguMDEzLDE3Ljg5OCwxNy44OTgsMTcuODk4aDQ0Ljc0NmM5Ljg4NSwwLDE3Ljg5OC04LjAxMywxNy44OTgtMTcuODk4VjE3Ljg5OEM5OC40NCw4LjAxNCw5MC40MjcsMCw4MC41NDMsMHogTTE5Ni44ODIsMCAgIGgtNDQuNzQ2Yy05Ljg4NiwwLTE3Ljg5OSw4LjAxNC0xNy44OTksMTcuODk4djE5Ni44ODNjMCw5Ljg4NSw4LjAxMywxNy44OTgsMTcuODk5LDE3Ljg5OGg0NC43NDYgICBjOS44ODUsMCwxNy44OTgtOC4wMTMsMTcuODk4LTE3Ljg5OFYxNy44OThDMjE0Ljc4MSw4LjAxNCwyMDYuNzY3LDAsMTk2Ljg4MiwweiIgZmlsbD0iI2MyYzZjZiIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=); }
-
-/*# sourceMappingURL=style.css.map */

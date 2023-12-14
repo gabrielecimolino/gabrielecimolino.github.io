@@ -1,8 +1,8 @@
-window.scrollBy({
-	top: 50,
-	left: 0,
-	behavior: 'smooth'
-});
+// window.scrollBy({
+// 	top: 50,
+// 	left: 0,
+// 	behavior: 'smooth'
+// });
 
 const preview = true;
 
@@ -55,7 +55,7 @@ var boidsCanvas = document.getElementById("boidsCanvas");
 var ctx = boidsCanvas.getContext("2d");
 
 boidsCanvas.width = document.documentElement.clientWidth;// * canvasScale;//window.innerWidth * canvasScale;
-boidsCanvas.height = window.innerHeight * canvasScale;//document.documentElement.scrollHeight;//Math.max( document.body.scrollHeight, document.body.offsetHeight, 
+boidsCanvas.height = document.documentElement.clientHeight;//window.innerHeight * canvasScale;//document.documentElement.scrollHeight;//Math.max( document.body.scrollHeight, document.body.offsetHeight, 
                        // document.documentElement.clientHeight, document.documentElement.scrollHeight,
                        // document.documentElement.offsetHeight );
 
@@ -259,7 +259,6 @@ for(var i = 0; i < numberOfBoids; i++){
 
 for(var i = 0; i < numberOfAsteroids; i++){
 	var size = asteroidSize + Math.round(randomRange(-1, 1) * asteroidSize, 0) / 2;
-	console.log("Making asteroid of size " + size);
 	asteroids.push(new Asteroid(Math.random() * canvasWidth, Math.random() * canvasHeight, size));
 }
 
@@ -281,8 +280,8 @@ function reset(){
 	boidsCanvas = document.getElementById("boidsCanvas");
 	ctx = boidsCanvas.getContext("2d");
 
-	boidsCanvas.width = window.innerWidth * canvasScale;
-	boidsCanvas.height = window.innerHeight * canvasScale;//document.documentElement.scrollHeight;//Math.max( document.body.scrollHeight, document.body.offsetHeight, 
+	//boidsCanvas.width = window.innerWidth * canvasScale;
+	//boidsCanvas.height = window.innerHeight * canvasScale;//document.documentElement.scrollHeight;//Math.max( document.body.scrollHeight, document.body.offsetHeight, 
 	                       // document.documentElement.clientHeight, document.documentElement.scrollHeight,
 	                       // document.documentElement.offsetHeight );
 
@@ -887,8 +886,19 @@ function checkButtons(){
 }
 
 function update() {
+	resizeCanvas();
 	if(atWar) warUpdate();
 	else peaceUpdate();
+}
+
+function resizeCanvas(){
+	boidsCanvas.width = document.documentElement.clientWidth;
+	boidsCanvas.height = document.documentElement.clientHeight;
+
+	canvasWidth = boidsCanvas.width;
+	canvasHeight = boidsCanvas.height;
+
+	var canvasOffset = {left: boidsCanvas.getBoundingClientRect().left, top: boidsCanvas.getBoundingClientRect().top};
 }
 
 function peaceUpdate(){
@@ -972,9 +982,15 @@ function handleMouseClick(event){
 
 		deactivateContextMenu();
 	}
-	else if(event.button == RMB){
+	else if(event.button == RMB || event.button == MMB){
 		toggleContextMenu();
 	}
+}
+
+function handleContextMenu(event)
+{
+	console.log("context");
+	toggleContextMenu();
 }
 
 function handleMouseRelease(event){
@@ -1041,25 +1057,6 @@ function handleKeyUp(event){
 	}
 }
 
-var angle = 0;
-var radVector = radAngleToVector(angle);
-console.log(angle + ": (" + radVector.x + ", " + radVector.y + ")");
-angle = Math.PI / 2;
-radVector = radAngleToVector(angle);
-console.log(angle + ": (" + radVector.x + ", " + radVector.y + ")");
-angle = Math.PI;
-radVector = radAngleToVector(angle);
-console.log(angle + ": (" + radVector.x + ", " + radVector.y + ")");
-angle = 3 * Math.PI / 2;
-radVector = radAngleToVector(angle);
-console.log(angle + ": (" + radVector.x + ", " + radVector.y + ")");
-angle = 2 * Math.PI;
-radVector = radAngleToVector(angle);
-console.log(angle + ": (" + radVector.x + ", " + radVector.y + ")");
-angle = 5 * Math.PI / 2;
-radVector = radAngleToVector(angle);
-console.log(angle + ": (" + radVector.x + ", " + radVector.y + ")");
-
 function contextMenu(event){
 	event.preventDefault();
 }
@@ -1073,3 +1070,4 @@ document.addEventListener("keydown", handleKeyDown, false);
 document.addEventListener("keyup", handleKeyUp, false);
 
 document.addEventListener('contextmenu', contextMenu);
+//boidsCanvas.addEventListener("contextmenu", handleContextMenu, true);

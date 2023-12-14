@@ -7,280 +7,153 @@
  		<link rel="shortcut icon" href="images/icon.png">
 
  		<link href="style.css" type="text/css" rel="stylesheet">
-
- 		<audio loop id="Para Bellum">
- 			<source src="audio/FBCombat.wav" type="audio/wav">
- 		</audio>
-
- 		<audio loop id="music">
- 			<source src="audio/Oui, Chef!!_Menu.wav" type="audio/wav">
- 		</audio>
-
   	</head>
   	<body>
 
-		<canvas id="boidsCanvas" class="boidsCanvas">
-
-		</canvas>
+		<canvas id="boidsCanvas" class="boidsCanvas"></canvas>
+		<script src="scripts/boids.js"></script>
 		
 		<div class="contentArea">
 
-			<div class="contentSeparator">
+	  		<div class="contentTopMargin">
 	  			<div class="fill">
 	  			</div>
 	  		</div>
 
-	  		<div id="who" class="contentSeparator">
-	  			<div class="fill">
-	  			</div>
-	  		</div>
-
+			<div id="who" class="contentAnchor"></div>
 	  		<div class="contentWrapper">
 		  		<div class="contentPreview">	
 			  		<div class="readables">	
-			  			<div class="title">
+			  			<div class="title en">
 			  				<p>
-			  					Who
+			  					who
 			  				</p>	
 			  			</div>
-			  			<div class="preamble">
-				  			<div class="quothi">	
-				  				<div>
-				  					<p> In all places, make yourself </p>
-				  				</div>
-				  				<div>
-				  					<p class="highlight"> master </p>
-				  				</div>
-				  			</div>
-				  			<div class="quothi">	
-				  				<div>	
-				  					<p> and wherever you stand will be the </p>
-				  				</div>
-				  				<div>	
-				  					<p class="highlight"> truth </p>
-				  				</div>
-				  			</div>
-			  			</div>
-			  			<div class="description">
-			  				<p>
-			  					My name is Gabriele Cimolino, and I'm in my fourth year of studying Computing at Queen's University. Before this one, I completed an arts degree with a major in Classical Studies. These seven years have given me many opportunities to explore the world, and a unique perspective that is informed by my own experience of our shared ideas. <br><br>
+						  <div class="title zh-cn">
+							<p>
+								谁
+							</p>	
+						</div>
+						<div class="title zh-tw">
+							<p>
+								誰
+							</p>	
+						</div>
 
-  								Right now, I am seeking projects and places to be a part of. I enjoy making things, and want to find the people who are making the best things so that their knowledge and guidance might improve my craft. <br><br>
-
-  								Typically, I make software. This has always been the case, but the work that I do often requires me to develop other skills. When I make games, there are sprites and textures to be drawn and music to be arranged. Projects need webpages, like this one, so I'll do that too. Occasionally, specialized hardware is required, for things such as IOT devices, so I'll get out the breadboard and wire strippers. <br><br>
-
-  								The source files for many of my creations can be found on <a href="https://github.com/gabrielecimolino" target="_blank"> &nbsp;Github&nbsp;</a>. As well, I have a game that can be played in browser at <a href="https://anna-mae.itch.io/oui-chef" target="_blank">&nbsp;itch.io&nbsp;</a>. I publish the project files for music that I make to the <a href="https://modarchive.org/index.php?request=view_profile&query=91587" target="_blank">&nbsp;ModArchive&nbsp;</a>, and as audio files to <a href="https://soundcloud.com/gabriele-cimolino" target="_blank">&nbsp;Soundcloud&nbsp;</a>, under the name Anna-Mae. You can listen to the tunes I've made by hitting the play button on the audio player at the top of each of this site's pages. <br><br>
-			  				</p>
-			  			</div>
+						<div class="description en">
+							<p>
+								My name is Gabriele Cimolino. I'm a doctor of Computer Science and I specialize in human-AI interaction in video games. Before studying Computing, I completed an Arts degree with a major in Classical Studies.
+							</p>
+						</div>
+						<div class="description zh-cn">
+							<p>
+								我的名字叫 Gabriele Cimolino。 我是计算机科学博士和人机交互专家。 我学习人类和人工智能的互动在电子游戏。 计算机科学以前，我学习了西方古代史。 
+							</p>
+						</div>
+						<div class="description zh-tw">
+							<p>
+								我的名字叫 Gabriele Cimolino。 我是計算機科學博士和人機交互專家。 我學習人類和人工智慧的互動在電子遊戲。 計算機科學以前，我學習了西方古代史。
+							</p>
+						</div>
 			  		</div>
 
 			  		<div class="image">
 			  			<div class="buffer">
-		  					<img src="images/profile.jpg">
+		  					<img src="images/Hector.jpg">
 		  				</div>
 		  			</div>
 		  		</div>
-	  			<p class="bodyHidden">
-					Vivamus ligula purus, mollis ut commodo sit amet, pellentesque at magna. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed tincidunt, justo porttitor aliquet convallis, libero felis lacinia magna, at luctus diam tortor tristique risus. Nam laoreet nibh in justo viverra, et condimentum libero finibus. Nunc efficitur ultrices vehicula. Aliquam quis magna sit amet est porta lacinia a in massa. Morbi suscipit maximus tincidunt. Nulla facilisi. Maecenas fermentum nisl libero, rutrum vehicula nisi porta in. Nullam in tortor urna. Aenean lobortis laoreet porttitor. Nam faucibus ligula ut dui rutrum tincidunt. Vestibulum fermentum, elit eget commodo imperdiet, purus lorem viverra odio, non luctus est orci vitae augue. Praesent eget condimentum libero. Nunc porttitor ultrices cursus.
-				</p>
 			</div>
+			
+			<div id="what" class="contentAnchor"></div>
+			<div class="contentWrapper">
+				<div class="contentPreview">	
+					<div class="readables">	
+						<div class="title en">
+							<p>
+								what
+							</p>	
+						</div>
+						<div class="title zh-cn">
+							<p>
+								什么
+							</p>	
+						</div>
+						<div class="title zh-tw">
+							<p>
+								甚麼
+							</p>	
+						</div>
+					  	<div class="description en">
+							<p>
+								My work explores how artificial intelligence can improve users' interactions with computers. This website serves as the TL;DR for my research publications and projects. Many pages contain interactive content and videos. If you would prefer to read, then you can read my <a href="documents/thesis.pdf" target="_blank">thesis</a> and find my papers listed in my <a href="documents/resume.pdf" target="_blank">resume</a>.
+							</p>
+					  	</div>
+					 	<div class="description zh-cn">
+							<p>
+								我做研究怎么人工智能能改善人类与电脑的互动。 这家网站是我研究的 TL;DR。 很多的网页有交互的软体和视频。 如果比较喜欢读， 就你会看我的<a href="documents/thesis.pdf" target="_blank">博士论文</a>和<a href="documents/resume.pdf" target="_blank">简历</a>。
+							</p>
+						</div>
+						<div class="description zh-tw">
+							<p>
+								我做研究怎麼人工智慧能改善人類與電腦的互動。 這家網站是我研究的 TL;DR。 很多的網頁有交互的軟體和視頻。 如果比較喜歡讀， 就你會看我的<a href="documents/thesis.pdf" target="_blank">博士論文</a>和<a href="documents/resume.pdf" target="_blank">簡歷</a>。
+							</p>
+						</div>
+					  	<div class="links">
+							<div class="linkButton en">
+								<a href="what/what.html">Check&nbsp;out&nbsp;my&nbsp;projects</a>
+							</div>
+							<div class="linkButton zh-cn">
+								<a href="what/what.html">看看我的研究课题</a>
+							</div>
+							<div class="linkButton zh-tw">
+								<a href="what/what.html">看看我的研究課題</a>
+							</div>
+						</div>
+					</div>
 
-			<div id="what" class="contentSeparator">
-	  			<div class="fill">
-	  			</div>
-	  		</div>
+					<div class="image">
+						<div class="buffer">
+							<img src="images/ChefLeft.png">
+						</div>
+					</div>
+				</div>
+		  	</div>
 
+			<div id="where" class="contentAnchor"></div>
 			<div class="contentWrapper">
 		  		<div class="contentPreview">	
 			  		<div class="readables">	
-			  			<div class="title">
+			  			<div class="title en">
 			  				<p>
-			  					System Fault
+			  					where
 			  				</p>	
 			  			</div>
-			  			<div class="description">
+						  <div class="title zh-cn">
+							<p>
+								哪里
+							</p>	
+						</div>
+						<div class="title zh-tw">
+							<p>
+								哪裡
+							</p>	
+						</div>
+			  			<div class="description en">
 			  				<p>
-			  					System Fault is a space exploration game inspired by Metroid. Most of what is there so far has been created by my friend <a href="https://github.com/ethomp10" target="_blank"> &nbsp;Eric Thompson&nbsp;</a> as his capstone project at Humber.<br><br>
-
-			  					Our plan now is to continue development and flesh out the amazing work he has already done. I have been entrusted with developing a new system architecture, creating more sophisticated enemy AI that uses machine learning, and composing the music, with Eric on guitar.<br><br>
-
-			  					The demo features my first attempt at making more interesting enemies. The Gorbons, black and yellow spheres that chase the player and explode when close enough, use Craig Reynold's Boids algorithm to produce flocking behaviour. Upon launching the Gorbonia scene from the main menu, the Gorbons will group up to form unnerving swarms of destruction. Much has yet to be done, including the design and implementation of another enemy type with multiple modes of behaviour, but Boids will feature prominently throughout the user's experience of the finished game.  
+			  					I was educated at <a href="https://www.queensu.ca/" target="_blank">Queen's&nbsp;University</a> where I earned honours degrees in Arts and Computing. I then joined the <a href="https://equis.cs.queensu.ca/" target="_blank">EQUIS&nbsp;Lab</a> where I earned a PhD in Human-Computer Interaction under the supervision of <a href="https://research.cs.queensu.ca/home/graham/" target="_blank">Nick&nbsp;Graham</a>.
 			  				</p>
 			  			</div>
-			  			<div class="links">
-			  				<div class="linkButton">
-			  					<a href="http://deadbatterygames.com/" target="_blank"> Play the demo </a>
-			  				</div>
-			  			</div>
-			  		</div>
-
-			  		<div class="image">
-		  				<div class="buffer">	
-		  					<img src="images/deadBattery.png">
-		  				</div>
-		  			</div>
-		  		</div>
-	  			<p class="bodyHidden">
-				</p>
-			</div>
-
-			<div class="contentSeparator">
-	  			<div class="fill">
-	  			</div>
-	  		</div>
-
-	  		<div class="contentWrapper">
-		  		<div class="contentPreview">	
-			  		<div class="readables">	
-			  			<div class="title">
-			  				<p class="paraBellumTitle">
-			  					Para Bellum
-			  				</p>
-			  			</div>
-			  			<div class="description">
-			  				<p>
-			  					Para Bellum is an online multiplayer 2D space shooter that runs in a browser. Players can create an account and compete in a best-of-three deathmatch with others. If playing solo then obstacles, enemies, and allies can be created in practice mode using the context menu on the main menu. The game was inspired by an implementation of the Boids algorithm, and makes use of Boids when controlling the offline AI agents.<br /><br />
-
-			  					Controls<br />
-			  					=======<br />
-			  					Movement&emsp;~&emsp;Arrow keys<br />
-			  					Fire&emsp;~&emsp;Shift<br />
-			  					Brake/Boost&emsp;~&emsp;Space<br />
-			  					Scoreboard&emsp;~&emsp;Tab<br />
-			  					Context Menu&emsp;~&emsp;Right click<br />
-			  				</p>
-			  			</div>
-			  			<div class="links">
-			  				<!-- <div class="linkButton">
-			  					<a href="https://anna-mae.itch.io/oui-chef" target="_blank"> Learn more </a>
-			  				</div> -->
-			  				<div class="linkButton">
-			  					<a href="https://parabellum.herokuapp.com/" target="_blank" class="paraBellumLink"> Play Para Bellum </a>
-			  				</div>
-			  			</div>
-			  		</div>
-
-			  		<div class="image">
-		  				<div class="buffer">	
-		  					<img src="images/icon_large.png">
-		  				</div>
-		  			</div>
-		  		</div>
-	  			<p class="bodyHidden">
-				</p>
-			</div>
-
-			<div class="contentSeparator">
-	  			<div class="fill">
-	  			</div>
-	  		</div>
-
-	  		<div class="contentWrapper">
-		  		<div class="contentPreview">	
-			  		<div class="readables">	
-			  			<div class="title" style="font-family: Restaurant">
-				  			<div>
-				  				<img src="images/Employee1.png">
-				  			</div>
-				  			<div>
-				  				<p class="chefTitle">
-				  					Oui, Chef!!
-				  				</p>
-				  			</div>
-				  			<div>
-				  				<img src="images/Employee2.png">
-				  			</div>
-				  			<div>
-				  				<img src="images/Employee.png">
-				  			</div>
-			  			</div>
-			  			<div class="description">
-			  				<p>
-			  					Oui, Chef!! is a machine learning game with a restaurant management theme. As far as I know, it is the first of its kind. The player must prepare dishes by selecting the correct ingredients, assembling them, and sending the order out. To help with this, the player can hire employees to do the same task. Each employee has a neural network that learns how to more accurately select correct ingredients when told to remake an order. <br><br>
-
-			  					This game was made as a term project for my game design class. I had the help of Sam Lee and Quentin Petraroia in making it. Oui, Chef!! can be played in browser, without the ability to save progress, at itch.io.
-			  				</p>
-			  			</div>
-			  			<div class="links">
-			  				<!-- <div class="linkButton">
-			  					<a href="https://anna-mae.itch.io/oui-chef" target="_blank"> Learn more </a>
-			  				</div> -->
-			  				<div class="linkButton">
-			  					<a href="https://anna-mae.itch.io/oui-chef" target="_blank"> Play Oui, Chef!! </a>
-			  				</div>
-			  			</div>
-			  		</div>
-
-			  		<div class="image">
-		  				<div class="buffer">	
-		  					<img src="images/ChefLeft.png">
-		  				</div>
-		  			</div>
-		  		</div>
-	  			<p class="bodyHidden">
-				</p>
-			</div>
-
-			<div class="contentSeparator">
-	  			<div class="fill">
-	  			</div>
-	  		</div>
-
-	  		<div class="contentWrapper">
-		  		<div class="contentPreview">	
-			  		<div class="readables">	
-			  			<div class="title">
-			  				<p>
-			  					Anna
-			  				</p>	
-			  			</div>
-			  			<div class="description">
-			  				<p>
-			  					Anna is the Unity Neural Network Analytics Platform. It's a Unity project that I made some time ago to demonstrate and test a neural network implementation that I later used in making Oui, Chef!!. Users can load a CSV format data set and perform some basic cleaning on the data, such as removing attributes or normalizing an attribute's values. Once the data is prepared, the user can select a target attribute and specify the structure of the network used for prediction. During training and testing the network is made visible and its neurons' activations and connection weights are colored to indicate their value; with red for values near 1 and blue for values near -1.  
-			  				</p>
-			  			</div>
-			  			<div class="links">
-			  				<div class="linkButton">
-			  					<a href="https://github.com/gabrielecimolino/Anna" target="_blank"> See the sources </a>
-			  				</div>
-			  			</div>
-			  		</div>
-
-			  		<div class="image">
-		  				<div class="buffer">	
-		  					<img src="images/Anna-Iris.png">
-		  				</div>
-		  			</div>
-		  		</div>
-	  			<p class="bodyHidden">
-				</p>
-			</div>
-
-			<div id="where" class="contentSeparator">
-	  			<div class="fill">
-	  			</div>
-	  		</div>
-
-			<div class="contentWrapper">
-		  		<div class="contentPreview">	
-			  		<div class="readables">	
-			  			<div class="title">
-			  				<p>
-			  					Where
-			  				</p>	
-			  			</div>
-			  			<div class="preamble">
-				  			<div class="quothi">	
-				  				<div>
-				  					<p> In the wildy </p>
-				  				</div>
-				  			</div>
-			  			</div>
-			  			<div class="description">
-			  				<p>
-			  					
-			  				</p>
-			  			</div>
+						<div class="description zh-cn">
+							<p>
+								我受过教育在 <a href="https://www.queensu.ca/" target="_blank">Queen's&nbsp;University</a>。 在那里我取得了两个荣誉学位。 然后我加入 <a href="https://equis.cs.queensu.ca/" target="_blank">EQUIS&nbsp;Lab</a> 和取得了人机交互博士学位跟我的博士生导师 <a href="https://research.cs.queensu.ca/home/graham/" target="_blank">Nick&nbsp;Graham</a>。
+							</p>
+						</div>
+						<div class="description zh-tw">
+							<p>
+								我受過教育在 <a href="https://www.queensu.ca/" target="_blank">Queen's&nbsp;University</a>。 在哪裡我取得了兩個榮譽學位。 然後我加入 <a href="https://equis.cs.queensu.ca/" target="_blank">EQUIS&nbsp;Lab</a> 和取得了人機交互博士學位跟我的博士生導師 <a href="https://research.cs.queensu.ca/home/graham/" target="_blank">Nick&nbsp;Graham</a>。
+							</p>
+						</div>
 			  		</div>
 
 			  		<div class="image">
@@ -289,216 +162,117 @@
 		  				</div>
 		  			</div>
 		  		</div>
-	  			<p class="bodyHidden">
-					Vivamus ligula purus, mollis ut commodo sit amet, pellentesque at magna. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed tincidunt, justo porttitor aliquet convallis, libero felis lacinia magna, at luctus diam tortor tristique risus. Nam laoreet nibh in justo viverra, et condimentum libero finibus. Nunc efficitur ultrices vehicula. Aliquam quis magna sit amet est porta lacinia a in massa. Morbi suscipit maximus tincidunt. Nulla facilisi. Maecenas fermentum nisl libero, rutrum vehicula nisi porta in. Nullam in tortor urna. Aenean lobortis laoreet porttitor. Nam faucibus ligula ut dui rutrum tincidunt. Vestibulum fermentum, elit eget commodo imperdiet, purus lorem viverra odio, non luctus est orci vitae augue. Praesent eget condimentum libero. Nunc porttitor ultrices cursus.
-				</p>
 			</div>
 
-			<div class="contentSeparator">
-	  			<div class="fill">
-	  			</div>
-	  		</div>
-
-			<div class="contentWrapper">
-		  		<div class="contentPreview">	
-			  		<div class="readables">	
-			  			<div class="title">
-			  				<p>
-			  					Queen's University
-			  				</p>	
-			  			</div>
-			  			<div class="description">
-			  				<p>
-			  					I am currently in my fourth year of a second degree at Queen's. The first time around I studied Classics, but near the end of that degree I realized that my interests were more software oriented. The year after finishing Classics I returned to study Computing and, although having completed a degree made me ineligible for the internship program, I have made the most of my studies and improved upon the academic skills I learned the first time.<br /><br />
-
-			  					Favorite Courses<br />
-			  					=============<br />
-			  					Discrete Math I & II&emsp;~&emsp;A+ in both<br />
-			  					System Level Programming&emsp;~&emsp;A+<br />
-			  					Programming Paradigms&emsp;~&emsp;A<br />
-			  					Game Architecture&emsp;~&emsp;A+<br />
-			  					Digital Systems&emsp;~&emsp;A+<br />
-			  					Game Design&emsp;~&emsp;A-<br />
-			  					Operating Systems&emsp;~&emsp;A+<br />
-			  					Artificial Intelligence&emsp;~&emsp;A+<br />
-			  				</p>
-			  			</div>
-			  		</div>
-
-			  		<div class="image">
-		  				<div class="buffer">	
-		  					<img src="images/justthemostlitcrest.png">
-		  				</div>
-		  			</div>
-		  		</div>
-	  			<p class="bodyHidden">
-				</p>
-			</div>
-
-			<div id="why" class="contentSeparator">
-	  			<div class="fill">
-	  			</div>
-	  		</div>
-
+			<div id="why" class="contentAnchor"></div>
 	  		<div class="contentWrapper">
 		  		<div class="contentPreview">	
 			  		<div class="readables">	
-			  			<div class="title">
+			  			<div class="title en">
 			  				<p>
-			  					Why
+			  					why
 			  				</p>	
 			  			</div>
-			  			<div class="preamble">
-				  			<div class="quothi">	
-				  				<div>
-				  					<p> I want to make the best stuff </p>
-				  				</div>
-				  			</div>
+						  <div class="title zh-cn">
+							<p>
+								为什么
+							</p>	
+						</div>
+						<div class="title zh-tw">
+							<p>
+								為甚麼
+							</p>	
+						</div>
+			  			<div class="description en">
+							<p>
+								I am interested in intelligent machines, such as humans and AI. I want to research and develop technologies that expand humans' intellectual and creative potential.
+							</p>
 			  			</div>
-			  			<div class="description">
+						<div class="description zh-cn">
+							<p>
+								我对智能机器有趣， 比如人类和人工智能。 我想要研发提高人类的聪明和创造性的技术。
+							</p>
+			  			</div>
+						<div class="description zh-tw">
+							<p>
+								我對智慧機器有趣， 比如人類和人工智慧。 我想要研發提高人類的聰明和創造性的技術。
+							</p>
 			  			</div>
 			  		</div>
 
 			  		<div class="image">
 			  			<div class="buffer">
-		  					<img src="images/gu3.png">
+		  					<img src="images/fittslist.png">
 		  				</div>
 		  			</div>
 		  		</div>
-	  			<p class="bodyHidden">
-					Vivamus ligula purus, mollis ut commodo sit amet, pellentesque at magna. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed tincidunt, justo porttitor aliquet convallis, libero felis lacinia magna, at luctus diam tortor tristique risus. Nam laoreet nibh in justo viverra, et condimentum libero finibus. Nunc efficitur ultrices vehicula. Aliquam quis magna sit amet est porta lacinia a in massa. Morbi suscipit maximus tincidunt. Nulla facilisi. Maecenas fermentum nisl libero, rutrum vehicula nisi porta in. Nullam in tortor urna. Aenean lobortis laoreet porttitor. Nam faucibus ligula ut dui rutrum tincidunt. Vestibulum fermentum, elit eget commodo imperdiet, purus lorem viverra odio, non luctus est orci vitae augue. Praesent eget condimentum libero. Nunc porttitor ultrices cursus.
-				</p>
 			</div>
 
-	  		<div class="contentSeparator">
-	  			<div class="fill">
-	  			</div>
-	  		</div>
-
-	  		<div class="contentSeparator">
-	  			<div class="fill">
-	  			</div>
-	  		</div>
-
-	  		<div class="contentSeparator">
-	  			<div class="fill">
-	  			</div>
-	  		</div>
+			<div class="contentFooter">
+				<span>G•CIMOLINO•ANT•F•FECIT•MMXXIII</span>
+			</div>
 
 		</div>
+
 	  	<div class="navBar">
-	  		
-	  		<div class="navBuffer">
-	  			<div class="fill">
-	  			</div>
-  			</div>
-
-  			<div class="navButton">
-  				<a href="#who" class="navLink"> who </a>
-  			</div>
-
-  			<div class="navBuffer">
-	  			<div class="fill">
-	  			</div>
-  			</div>
-
-  			<div class="navButton">
-  				<a href="#what" class="navLink"> what </a>
-  			</div>
-
-  			<div class="navBuffer">
-	  			<div class="fill">
-	  			</div>
-  			</div>
-
-  			<div class="navButton">
-  				<a href="#where" class="navLink"> where </a>
-  			</div>
-
-  			<div class="navBuffer">
-	  			<div class="fill">
-	  			</div>
-  			</div>
-
-  			<div class="navBuffer">
-	  			<div class="fill">
-	  			</div>
-  			</div>
-
-  			<div class="navButton">
-  				<a href="#why" class="navLink"> why </a>
-  			</div>
-
-  			<div class="navBuffer">
-	  			<div class="fill">
-	  			</div>
-  			</div>
-  			
-  			<div class="navBuffer">
-	  			<div class="fill">
-	  			</div>
-  			</div>
-
-  			<div class="navBuffer">
-	  			<div class="fill">
-	  			</div>
-  			</div>
-
-  			<div class="navBuffer">
-	  			<div class="fill">
-	  			</div>
-  			</div>
-
-  			<div class="navBuffer">
-	  			<div class="fill">
-	  			</div>
-  			</div>
-
-  			<div class="navBuffer">
-	  			<div class="fill">
-	  			</div>
-  			</div>
-
-  			<div class="musicbox">
-  				<div class="player">
-					<div id="control-panel" class="control-panel">
-						<!-- <div class="album-art"></div> -->
-						<div class="controls">
-							<div class="artWrapper">
-								<div class="chef-album-art"></div>
-							</div>
-							<div id="playButton" class="play"></div>
-							<div id="trackInfo" class="trackInfo">
-<!-- 								<div  class="artist">
-									<p>
-										AnnaMae
-									</p>
-								</div>
-								<div class="trackName">
-									<p>
-										Para Bellum
-									</p>
-								</div> -->
-							<div  class="artist">
-									<p>
-										AnnaMae
-									</p>
-								</div>
-								<div class="trackName">
-									<p>
-										Oui, Chef!!
-									</p>
-								</div>
-							</div> 
-						</div>
-					</div>
+			<div class="navButtons">
+				<div class="navButton en">
+					<a href="#who" class="navLink"> who </a>
 				</div>
 
-				<script src="scripts/player.js"></script>
-				<script src="scripts/boids.js"></script>
+				<div class="navButton zh-cn">
+					<a href="#who" class="navLink"> 谁 </a>
+				</div>
 
-  			</div>
+				<div class="navButton zh-tw">
+					<a href="#who" class="navLink"> 誰 </a>
+				</div>
 
+				<div class="navButton en">
+					<a href="#what" class="navLink"> what </a>
+				</div>
+
+				<div class="navButton zh-cn">
+					<a href="#what" class="navLink"> 什么 </a>
+				</div>
+
+				<div class="navButton zh-tw">
+					<a href="#what" class="navLink"> 甚麼 </a>
+				</div>
+
+				<div class="navButton en">
+					<a href="#where" class="navLink"> where </a>
+				</div>
+
+				<div class="navButton zh-cn">
+					<a href="#where" class="navLink"> 哪里 </a>
+				</div>
+
+				<div class="navButton zh-tw">
+					<a href="#where" class="navLink"> 哪裡 </a>
+				</div>
+
+				<div class="navButton en">
+					<a href="#why" class="navLink"> why </a>
+				</div>
+
+				<div class="navButton zh-cn">
+					<a href="#why" class="navLink"> 为什么 </a>
+				</div>
+
+				<div class="navButton zh-tw">
+					<a href="#why" class="navLink"> 為甚麼 </a>
+				</div>
+			</div>
+
+			<div class="languageSelector">
+				<button id="englishButton">Abc</button>
+				<button id="simplifiedButton">简体</button>
+				<button id="traditionalButton">繁體</button>
+			</div>
+
+			<script src="scripts/language.js"></script>
+			<script src="scripts/opacity.js"></script>
   		</div>
   	</body> 
 </html>
