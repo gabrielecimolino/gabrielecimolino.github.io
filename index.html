@@ -1,278 +1,36 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Res Gestae</title>
+        <link rel="stylesheet" href="./css/default.css" />
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <a href="./">Gabriele Cimolino, PhD</a>
+            </div>
+            <nav>
+                <!-- <a href="/about.html">About</a> -->
+                <a href="./projects.html">Projects</a>
+            </nav>
+        </header>
 
-  	<head>
- 		<title>Res Gestae</title>
- 		<link rel="icon" href="images/icon.png">
- 		<link rel="shortcut icon" href="images/icon.png">
+        <main role="main">
+            <h1><latin>Valete amici</latin></h1>
+            <content><p>My name is Gabriele Cimolino. I’m a classically educated computer scientist with some diverse interests. Mostly, I’m interested in computers, games, and the intelligences that play them. I recently moved to Halifax with my wife, Kayleigh, and my little dog, Hector, so now I’m looking for interesting things to do there.</p>
+<figure>
+<img src="./images/Hector.jpg" alt="Hector canis probvs est" />
+<figcaption aria-hidden="true"><latin>Hector canis probvs est<latin></figcaption>
+</figure>
+<p>I spent thirteen years studying at Queen’s University and writing my own software. I especially like programming video games; you can find some of my gaming projects on my <a href="./projects.html">projects</a> page. For my PhD thesis, I made AI that helps people with disabilities to play video games and I studied how players understand, and sometimes misunderstand, AI assistance.</p></content>
+        </main>
 
- 		<link href="style.css" type="text/css" rel="stylesheet">
-  	</head>
-  	<body>
-
-		<canvas id="boidsCanvas" class="boidsCanvas"></canvas>
-		<script src="scripts/boids.js"></script>
-		
-		<div class="contentArea">
-
-	  		<div class="contentTopMargin">
-	  			<div class="fill">
-	  			</div>
-	  		</div>
-
-			<div id="who" class="contentAnchor"></div>
-	  		<div class="contentWrapper">
-		  		<div class="contentPreview">	
-			  		<div class="readables">	
-			  			<div class="title en">
-			  				<p>
-			  					who
-			  				</p>	
-			  			</div>
-						  <div class="title zh-cn">
-							<p>
-								谁
-							</p>	
-						</div>
-						<div class="title zh-tw">
-							<p>
-								誰
-							</p>	
-						</div>
-
-						<div class="description en">
-							<p>
-								My name is Gabriele Cimolino. I'm a doctor of Computer Science and I specialize in human-AI interaction in video games. Before studying Computing, I completed an Arts degree with a major in Classical Studies.
-							</p>
-						</div>
-						<div class="description zh-cn">
-							<p>
-								我的名字叫 Gabriele Cimolino。 我是计算机科学博士和人机交互专家。 我学习人类和人工智能的互动在电子游戏。 计算机科学以前，我学习了西方古代史。 
-							</p>
-						</div>
-						<div class="description zh-tw">
-							<p>
-								我的名字叫 Gabriele Cimolino。 我是計算機科學博士和人機交互專家。 我學習人類和人工智慧的互動在電子遊戲。 計算機科學以前，我學習了西方古代史。
-							</p>
-						</div>
-			  		</div>
-
-			  		<div class="image">
-			  			<div class="buffer">
-		  					<img src="images/Hector.jpg">
-		  				</div>
-		  			</div>
-		  		</div>
-			</div>
-			
-			<div id="what" class="contentAnchor"></div>
-			<div class="contentWrapper">
-				<div class="contentPreview">	
-					<div class="readables">	
-						<div class="title en">
-							<p>
-								what
-							</p>	
-						</div>
-						<div class="title zh-cn">
-							<p>
-								什么
-							</p>	
-						</div>
-						<div class="title zh-tw">
-							<p>
-								甚麼
-							</p>	
-						</div>
-					  	<div class="description en">
-							<p>
-								My work explores how artificial intelligence can improve users' interactions with computers. This website serves as the TL;DR for my research publications and projects. Many pages contain interactive content and videos. If you would prefer to read, then you can read my <a href="documents/thesis.pdf" target="_blank">thesis</a> and find my papers listed in my <a href="documents/resume.pdf" target="_blank">resume</a>.
-							</p>
-					  	</div>
-					 	<div class="description zh-cn">
-							<p>
-								我做研究怎么人工智能能改善人类与电脑的互动。 这家网站是我研究的 TL;DR。 很多的网页有交互的软体和视频。 如果比较喜欢读， 就你会看我的<a href="documents/thesis.pdf" target="_blank">博士论文</a>和<a href="documents/resume.pdf" target="_blank">简历</a>。
-							</p>
-						</div>
-						<div class="description zh-tw">
-							<p>
-								我做研究怎麼人工智慧能改善人類與電腦的互動。 這家網站是我研究的 TL;DR。 很多的網頁有交互的軟體和視頻。 如果比較喜歡讀， 就你會看我的<a href="documents/thesis.pdf" target="_blank">博士論文</a>和<a href="documents/resume.pdf" target="_blank">簡歷</a>。
-							</p>
-						</div>
-					  	<div class="links">
-							<div class="linkButton en">
-								<a href="what/what.html">Check&nbsp;out&nbsp;my&nbsp;projects</a>
-							</div>
-							<div class="linkButton zh-cn">
-								<a href="what/what.html">看看我的研究课题</a>
-							</div>
-							<div class="linkButton zh-tw">
-								<a href="what/what.html">看看我的研究課題</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="image">
-						<div class="buffer">
-							<img src="images/ChefLeft.png">
-						</div>
-					</div>
-				</div>
-		  	</div>
-
-			<div id="where" class="contentAnchor"></div>
-			<div class="contentWrapper">
-		  		<div class="contentPreview">	
-			  		<div class="readables">	
-			  			<div class="title en">
-			  				<p>
-			  					where
-			  				</p>	
-			  			</div>
-						  <div class="title zh-cn">
-							<p>
-								哪里
-							</p>	
-						</div>
-						<div class="title zh-tw">
-							<p>
-								哪裡
-							</p>	
-						</div>
-			  			<div class="description en">
-			  				<p>
-			  					I was educated at <a href="https://www.queensu.ca/" target="_blank">Queen's&nbsp;University</a> where I earned honours degrees in Arts and Computing. I then joined the <a href="https://equis.cs.queensu.ca/" target="_blank">EQUIS&nbsp;Lab</a> where I earned a PhD in Human-Computer Interaction under the supervision of <a href="https://research.cs.queensu.ca/home/graham/" target="_blank">Nick&nbsp;Graham</a>.
-			  				</p>
-			  			</div>
-						<div class="description zh-cn">
-							<p>
-								我受过教育在 <a href="https://www.queensu.ca/" target="_blank">Queen's&nbsp;University</a>。 在那里我取得了两个荣誉学位。 然后我加入 <a href="https://equis.cs.queensu.ca/" target="_blank">EQUIS&nbsp;Lab</a> 和取得了人机交互博士学位跟我的博士生导师 <a href="https://research.cs.queensu.ca/home/graham/" target="_blank">Nick&nbsp;Graham</a>。
-							</p>
-						</div>
-						<div class="description zh-tw">
-							<p>
-								我受過教育在 <a href="https://www.queensu.ca/" target="_blank">Queen's&nbsp;University</a>。 在哪裡我取得了兩個榮譽學位。 然後我加入 <a href="https://equis.cs.queensu.ca/" target="_blank">EQUIS&nbsp;Lab</a> 和取得了人機交互博士學位跟我的博士生導師 <a href="https://research.cs.queensu.ca/home/graham/" target="_blank">Nick&nbsp;Graham</a>。
-							</p>
-						</div>
-			  		</div>
-
-			  		<div class="image">
-			  			<div class="buffer">
-		  					<img src="images/showcase.jpg">
-		  				</div>
-		  			</div>
-		  		</div>
-			</div>
-
-			<div id="why" class="contentAnchor"></div>
-	  		<div class="contentWrapper">
-		  		<div class="contentPreview">	
-			  		<div class="readables">	
-			  			<div class="title en">
-			  				<p>
-			  					why
-			  				</p>	
-			  			</div>
-						  <div class="title zh-cn">
-							<p>
-								为什么
-							</p>	
-						</div>
-						<div class="title zh-tw">
-							<p>
-								為甚麼
-							</p>	
-						</div>
-			  			<div class="description en">
-							<p>
-								I am interested in intelligent machines, such as humans and AI. I want to research and develop technologies that expand humans' intellectual and creative potential.
-							</p>
-			  			</div>
-						<div class="description zh-cn">
-							<p>
-								我对智能机器有趣， 比如人类和人工智能。 我想要研发提高人类的聪明和创造性的技术。
-							</p>
-			  			</div>
-						<div class="description zh-tw">
-							<p>
-								我對智慧機器有趣， 比如人類和人工智慧。 我想要研發提高人類的聰明和創造性的技術。
-							</p>
-			  			</div>
-			  		</div>
-
-			  		<div class="image">
-			  			<div class="buffer">
-		  					<img src="images/fittslist.png">
-		  				</div>
-		  			</div>
-		  		</div>
-			</div>
-
-			<div class="contentFooter">
-				<span>G•CIMOLINO•ANT•F•FECIT•MMXXIII</span>
-			</div>
-
-		</div>
-
-	  	<div class="navBar">
-			<div class="navButtons">
-				<div class="navButton en">
-					<a href="#who" class="navLink"> who </a>
-				</div>
-
-				<div class="navButton zh-cn">
-					<a href="#who" class="navLink"> 谁 </a>
-				</div>
-
-				<div class="navButton zh-tw">
-					<a href="#who" class="navLink"> 誰 </a>
-				</div>
-
-				<div class="navButton en">
-					<a href="#what" class="navLink"> what </a>
-				</div>
-
-				<div class="navButton zh-cn">
-					<a href="#what" class="navLink"> 什么 </a>
-				</div>
-
-				<div class="navButton zh-tw">
-					<a href="#what" class="navLink"> 甚麼 </a>
-				</div>
-
-				<div class="navButton en">
-					<a href="#where" class="navLink"> where </a>
-				</div>
-
-				<div class="navButton zh-cn">
-					<a href="#where" class="navLink"> 哪里 </a>
-				</div>
-
-				<div class="navButton zh-tw">
-					<a href="#where" class="navLink"> 哪裡 </a>
-				</div>
-
-				<div class="navButton en">
-					<a href="#why" class="navLink"> why </a>
-				</div>
-
-				<div class="navButton zh-cn">
-					<a href="#why" class="navLink"> 为什么 </a>
-				</div>
-
-				<div class="navButton zh-tw">
-					<a href="#why" class="navLink"> 為甚麼 </a>
-				</div>
-			</div>
-
-			<div class="languageSelector">
-				<button id="englishButton">Abc</button>
-				<button id="simplifiedButton">简体</button>
-				<button id="traditionalButton">繁體</button>
-			</div>
-
-			<script src="scripts/language.js"></script>
-			<script src="scripts/opacity.js"></script>
-  		</div>
-  	</body> 
+        <footer>
+		  <p>Site proudly generated by <a href="http://jaspervdj.be/hakyll">Hakyll</a></p>
+		  <latin>G•CIMOLINO•ANT•F•FECIT•MMXXIV</latin>
+        </footer>
+    </body>
 </html>
