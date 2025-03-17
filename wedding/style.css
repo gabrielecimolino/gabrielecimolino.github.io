@@ -25,15 +25,18 @@ body{
         font-size: 10vw;
         text-shadow: -2px -2px 0 #fff, 1px -2px 0 #fff, -2px 1px 0 #fff, 1px 1px 0 #fff;
     }
+    us{        
+        img{
+            margin-top: 3vw;
+            width: 100%;
+        }
+    }
     specifics{
-        position: absolute;
-        top: 65vw;
-        left: 0;
         width: 100%;
         p{
             text-align: center;
             color: #B0CCE3;            
-            font-size: 5vw;
+            font-size: 6vw;
             text-shadow: -2px -2px 0 #fff, 1px -2px 0 #fff, -2px 1px 0 #fff, 1px 1px 0 #fff;
         }
         a{
@@ -43,12 +46,10 @@ body{
     }
     guesswhat{
         p{
-            position: absolute;
-            top: 90vw;
             width: 100%;
             margin-bottom: 1vw;
             text-align: center;
-            font-size: 4vw;
+            font-size: 5vw;
             color: #B0CCE3;
             text-shadow: -2px -2px 0 #fff, 1px -2px 0 #fff, -2px 1px 0 #fff, 1px 1px 0 #fff;
         }
@@ -74,6 +75,14 @@ body{
         text-align: center;
         font-size: 5vw;
         text-shadow: -2px -2px 0 #fff, 1px -2px 0 #fff, -2px 1px 0 #fff, 1px 1px 0 #fff;
+    }
+    us{        
+        img{
+            position: absolute;
+            left: 60%;            
+            margin-top: 3vw;
+            width: 35%;
+        }
     }
     specifics{
         position: absolute;
