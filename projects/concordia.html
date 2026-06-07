@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Concordia — Gabriele Cimolino</title>
+  <meta name="description" content="Concordia — a reference architecture and C# toolkit for building personalizable, interpretable AI copilots in Unity games.">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="site-wrapper">
+
+    <header>
+      <span class="site-name"><a href="../index.html">Gabriele Cimolino</a></span>
+      <nav>
+        <a href="../research.html">Research</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../publications.html">Publications</a>
+        <a href="../about.html">About</a>
+        <a href="../cv.html">CV</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="project-header">
+        <h1>Concordia</h1>
+        <p class="project-meta">2024 &nbsp;·&nbsp; C# &nbsp;·&nbsp; Unity &nbsp;·&nbsp; Partial Automation</p>
+      </div>
+
+      <div class="project-body">
+
+        <p>
+          Concordia is a reference architecture and C# toolkit for building AI
+          copilots in Unity games. A copilot takes over parts of game input the
+          player can't or doesn't want to handle — movement, aiming, dodging —
+          while the player controls the rest. Concordia makes it practical to
+          build copilots that players can personalize, that communicate their
+          intentions through awareness cues, and that can be redesigned without
+          rebuilding from scratch.
+        </p>
+
+        <figure class="project-figure">
+          <img src="../images/Concordia_HighLevel.png" alt="High-level PAT architecture diagram showing data flow between player, copilot, and game.">
+          <figcaption>Data flow in the PAT architecture. Red paths carry input to the game; blue paths carry game state to the player and copilot.</figcaption>
+        </figure>
+
+        <p>
+          The toolkit separates copilot behaviour into five plug-in types.
+          Processors make the AI's gameplay decisions. Actuators translate those
+          decisions into game inputs. Communicators expose the AI's state as
+          awareness cues. Sensors gather input from the player's devices.
+          Mediators blend or select between player and AI input for each game
+          action. The components are independent — changing how the AI decides
+          what to do doesn't affect how it communicates those decisions or how
+          it controls the game. This encapsulation keeps iterative redesign
+          tractable: a change to the AI's strategy touches a Processor, not the
+          whole system.
+        </p>
+
+        <figure class="project-figure">
+          <img src="../images/Concordia_Architecture.png" alt="PAT component architecture showing the five plug-in types and their interfaces.">
+          <figcaption>The five PAT components and their plug-in types. Blue plug-ins change with the game; green and red plug-ins change with input types or runtime environment.</figcaption>
+        </figure>
+
+        <p>
+          Interface Invaders demonstrates the toolkit in a Space Invaders clone.
+          Players can assign any game input to any compatible device — keyboard,
+          gamepad, mouse, DK bongos — or delegate it to the copilot
+          entirely. Awareness cues show which enemy the copilot is targeting and
+          which positions it is avoiding, but only for the inputs the copilot is
+          currently handling. The settings menu exposes all of this without any
+          additional code from the developer.
+        </p>
+
+        <figure class="project-figure">
+          <img src="../images/InterfaceInvaders_Settings.png" alt="The Concordia settings menu showing input assignment and mediator configuration.">
+          <figcaption>The settings menu. The player is controlling Shoot with a bite switch; the copilot controls Move.</figcaption>
+        </figure>
+
+        <p>
+          The architecture emerged from studies with players who needed to
+          control what they could and understand what the AI was doing. Players
+          with motor impairments needed to personalize which inputs they handled
+          and what devices they used. Players who found games difficult needed to
+          understand what the copilot was doing and why. The key insight is that
+          a copilot and player pursuing the same objective can support a wide
+          range of control configurations — from full player control to full
+          delegation — using the same underlying decision-making. Concordia
+          formalizes the design choices that make this work.
+        </p>
+
+        <div class="game-embed" id="ii-wrapper">
+          <div class="game-cover" id="ii-cover">
+            <img src="../images/InterfaceInvaders_Screenshot1.png" alt="Interface Invaders preview">
+            <button class="game-cover-btn" onclick="startII()">Play</button>
+          </div>
+          <iframe id="ii-iframe"
+            src=""
+            title="Interface Invaders — playable demo"
+            allow="autoplay; fullscreen"></iframe>
+        </div>
+
+        <a class="project-link-out" href="https://github.com/gabrielecimolino/Concordia">GitHub →</a>
+        <a class="project-link-out" href="https://gabrielecimolino.github.io/Concordia---Interface-Invaders/">Open in full window →</a>
+
+      </div>
+    </main>
+
+    <footer>
+      <span>Gabriele Cimolino, PhD &mdash; Halifax, NS</span>
+      <span class="footer-links">
+        <a href="https://github.com/gabrielecimolino">GitHub</a>
+        <a href="https://www.linkedin.com/in/gabriele-cimolino/">LinkedIn</a>
+        <a href="mailto:gabrielecimolino@gmail.com">Email</a>
+        <a href="https://scholar.google.com/citations?user=f0xJPVYAAAAJ">Scholar</a>
+      </span>
+    </footer>
+
+  </div>
+
+  <script>
+    (function () {
+      function scale() {
+        var wrapper = document.getElementById('ii-wrapper');
+        var iframe = document.getElementById('ii-iframe');
+        var s = wrapper.offsetWidth / 960;
+        wrapper.style.height = (600 * s) + 'px';
+        iframe.style.transform = 'scale(' + s + ')';
+      }
+
+      window.startII = function () {
+        document.getElementById('ii-cover').style.display = 'none';
+        document.getElementById('ii-iframe').src = 'https://gabrielecimolino.github.io/Concordia---Interface-Invaders/';
+        scale();
+      };
+
+      document.addEventListener('DOMContentLoaded', scale);
+      window.addEventListener('resize', scale);
+    })();
+  </script>
+
+</body>
+</html>

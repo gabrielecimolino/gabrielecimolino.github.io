@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research — Gabriele Cimolino</title>
+  <meta name="description" content="Research on human-AI shared control, mental models of AI, and automation confusion — Gabriele Cimolino.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="site-wrapper">
+
+    <header>
+      <span class="site-name"><a href="index.html">Gabriele Cimolino</a></span>
+      <nav>
+        <a href="research.html" class="active">Research</a>
+        <a href="projects.html">Projects</a>
+        <a href="publications.html">Publications</a>
+        <a href="about.html">About</a>
+        <a href="cv.html">CV</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Research</h1>
+
+      <div class="research-section">
+        <p>
+          The human half of human-AI interaction is where the magic happens. My work investigates the design of AI assistants and the magical thinking users exhibit in their interactions with them. I showed how partial automation can make video games more accessible, that visual indicators of AI intent can improve trust calibration, and why nonetheless users develop superstitions about how to make the AI do what they want. Now I want to figure out how to make AI that does that; without users resorting to magic.
+        </p>
+
+        <p>
+          Much of my PhD research was conducted using video games, which provide a low-stakes environment ideal for probing users' beliefs about how the AI works during sustained interactions. I explored how AI that shares control with human players can make video games more accessible to people with disabilities. Human-AI shared control is an interaction paradigm in which human and AI jointly control a system. It appears not only in games, but also across surgery, semi-autonomous driving, mobility assistance, creativity tools, and telerobotics. My survey of 55 shared control systems from these six domains maps the forms this cooperation takes and provides a design vocabulary for comparing them.
+        </p>
+
+        <p class="paper-cite">
+          <a href="https://dl.acm.org/doi/10.1145/3491102.3517610">Two Heads Are Better Than One: A Dimension Space for Unifying Human and Artificial Intelligence in Shared Control</a>
+          &mdash; Cimolino, Graham. <em>CHI 2022.</em> 34 citations.
+        </p>
+      </div>
+
+      <!-- ── Section 1 ───────────────────────────────────────────── -->
+      <div class="research-section">
+        <h2>Partial automation makes games accessible &mdash; and reveals confusion</h2>
+
+        <p>
+          Partial automation is one form of shared control: the AI controls some inputs while the player controls the rest. In digital games, this can make play accessible to people who cannot operate all of a game&rsquo;s controls. A study of six participants with spinal cord injury &mdash; ranging from minor motor impairments to complete paralysis below the neck &mdash; found that partial automation enabled all of them to engage meaningfully with both games tested.
+        </p>
+
+        <p class="paper-cite">
+          <a href="https://dl.acm.org/doi/10.1145/3474693">The Role of Partial Automation in Increasing the Accessibility of Digital Games</a>
+          &mdash; Cimolino, Askari, Graham. <em>PACMHCI (CHI PLAY), 2021.</em> 26 citations.
+        </p>
+
+        <p>
+          Participants told me that accessible games did more than make exercise tolerable: they transformed participants from passive recipients of therapy into active participants with goals, competition, and simultaneous physical and cognitive engagement. They believed that playing exercise games with AI assistance may have helped them to overcome the negativity they felt during rehabilitation.
+        </p>
+
+        <p class="participant-quote">
+          &ldquo;It allows you to think that you can still do something that, to be honest, you never thought that you'd be able to do again.&rdquo;
+        </p>
+
+        <p class="paper-cite">
+          <a href="https://dl.acm.org/doi/abs/10.1145/3441852.3471227">Beyond Fun: Players&rsquo; Experiences of Accessible Rehabilitation Gaming for Spinal Cord Injury</a>
+          &mdash; Cimolino, Askari, Graham. <em>ASSETS 2021.</em> 6 citations.
+        </p>
+
+        <p>
+          This study produced the observation that motivated my mental models research. One participant tilted his button controller to steer his AI-controlled avatar. The AI made all movement decisions; the tilt did nothing. He came to believe he had found a way to influence it. The automation was working exactly as designed, but the participant developed a false theory of how it worked and acted on it. I dedicated the rest of my PhD to understanding and solving this problem.
+        </p>
+      </div>
+
+      <!-- ── Section 2 ───────────────────────────────────────────── -->
+      <div class="research-section">
+        <h2>Communicating AI intentions improves trust but not performance</h2>
+
+        <p>
+          The obvious response to confusion about what the AI is doing is to tell users. If misattribution of control causes confusion, making the AI&rsquo;s actions and intentions visible should reduce it. Ninja Showdown &mdash; a Rock-Paper-Scissors-inspired fighting game in which the player controls one attack and the AI controls the others &mdash; was used to test this with 150 Prolific participants. They played in one of three conditions: no information about AI actions (No cues), information about what the AI was currently doing (Action cues), or information about both what it was doing and what it intended to do next (Intention cues). Trust appropriateness was measured using Matthews correlation coefficient across all rounds played.
+        </p>
+
+        <p>
+          Intention cues significantly improved how appropriately participants trusted the AI (p < .05). Participants allowed the AI to act on its own when it would perform the winning action and they overrode it when it wouldn't. However, paradoxically, their scores in the game did not improve. More accurate understanding of the AI did not translate into better cooperation. This was the first indication that the problem ran deeper than missing information and that more focused study of automation confusion was needed.
+        </p>
+
+        <p class="paper-cite">
+          <a href="https://www.gabrielecimolino.com/papers/Impact_of_Awareness_Cues_on_Reliance_in_Shared_Control___TRAIT_Workshop.pdf">Impact of Awareness Cues on Trust in Human-AI Shared Control</a>
+          &mdash; Cimolino, Gutwin, Graham. <em>TRAIT Workshop at CHI 2022.</em> 1 citation.
+        </p>
+      </div>
+
+      <!-- ── Section 3 ───────────────────────────────────────────── -->
+      <div class="research-section">
+        <h2>A grounded theory of automation confusion</h2>
+
+        <p>
+          To understand what was going wrong, I recruited ten non-gamer adults to play two partially automated games: the Ninja Showdown game from the awareness cues study and a one button adaptation of Spelunky. To produce metacognitive data that provide insights into participants' mental models of their AI assistants, I periodically prompted them to think aloud while playing. I also collected gameplay logs, eye tracking, and post-session interview data that I analyzed using grounded theory methodology. Both games were designed to be as transparent as possible: tutorials explained which actions the player controlled, and awareness cues displayed the AI's current and intended actions in real time. Nine of the ten participants were confused anyway.
+        </p>
+
+        <p>
+          The resulting theory describes four interacting categories: the sources of confusion, the mental model errors those sources produce, the behaviors that follow from those errors, and the attitudes that determine whether users are willing and actively trying to correct their understanding. My analyses tracked how participants' actions and observations shaped their mental models over the course of play. I organized these sequences of events into confusion episodes that illustrate how the categories of my theory of automation confusion work together.
+        </p>
+
+        <p>
+          P2 believed she controlled Emi&rsquo;s Bomb attack by pressing the &lsquo;b&rsquo; key &mdash; an <em>incorrect mapping</em>, one of the theory&rsquo;s sources of confusion, in which she invented an association between the first letter of the action&rsquo;s name and the key that should control it. This produced an <em>over-attribution</em> error: she believed she caused an action the AI controlled. She pressed the key to confirm her hypothesis &mdash; a <em>confirmation</em> behavior. When Emi coincidentally used the Bomb, P2 interpreted the automated action as proof that her press had worked: a case of <em>misinterpreted feedback</em> that reinforced the original error.
+        </p>
+
+        <figure class="finding-figure">
+          <img src="/images/P2 Bomb.png" alt="Three panels are shown and each features text explaining what they depict. Below this text, boxes naming the concept and category that these panels illustrate are linked by arrows, representing how each affects the next. In the first panel, Emi intends to use the Bomb and Takeshi is using the Dart. The explanatory text reads: P2 believed she controlled the Bomb with the b key. The classification box reads: Over-Attribution is one of the Types of Mental Model Errors. In the second panel, Emi intends to use the Bomb and Takeshi is using the Dart. A bubble, representing P2 pressing the b key, is shown in the centre. The explanatory text reads: P2 pressed the b key to make Emi use the Bomb. The classification box reads: Confirmation is one of the Behaviours Resulting from Confusion. In the third panel, Emi is using the Bomb and Takeshi is using the Dart. The explanatory text reads: P2 misinterpreted Emi using the Bomb as feedback reinforcing her belief that she controlled the Bomb. The classification box reads: Misinterpreted Feedback is one of the Sources of Confusion.">
+        </figure>
+
+        <p>
+          P7 felt <em>uninvolved</em> because her avatar acted on its own. She concluded the optimal strategy was to press the spacebar as often as possible, believing this guaranteed a win. She began <em>mashing</em> &mdash; pressing with no specific intention &mdash; and stopped paying attention to what happened. She seldom noticed when she lost. Her emotional attitude produced behavior that ensured that she <em>missed feedback</em> that might have corrected her beliefs.
+        </p>
+
+        <p class="participant-quote">
+          &ldquo;It&rsquo;s too boring. Like, if I kept just pressing the spacebar I&rsquo;ll win in all the games, right? I don&rsquo;t even need to see what she&rsquo;s predicting. You don&rsquo;t even need to hear, just press.&rdquo;
+        </p>
+
+        <figure class="finding-figure">
+          <img src="/images/P7 Mash.png" alt="Three panels are shown and each features text explaining what they depict. Below this text, boxes naming the concept and category that these panels illustrate are linked by arrows, representing how each affects the next. Across all of the panels, bubbles representing P7 mashing the spacebar are copious. In the first panel, Emi intends to use the Bomb and Takeshi is not using any weapon. The explanatory text reads: P7 felt uninvolved in play because she could not control all of Emi's actions. The classification box reads: Uninvolved is one of the Attitudes Towards the Game. In the second panel, Emi is using the Sword and Takeshi is using the Dart. The explanatory text reads: P7 pressed the spacebar all the time because she thought that she would always win. The classification box reads: Mashing is one of the Behaviours Resulting from Confusion. In the third panel, Emi looks hurt and Takeshi looks like he has thrown the Dart. The explanatory text reads: P7 seldom noticed when she lost. The classification box reads: Missed Feedback is one of the Sources of Confusion.">
+        </figure>
+
+        <p>
+          P3 wanted her Spelunky avatar to move in the direction she intended, but movement was controlled entirely by the AI. Her desire to control what she could not &mdash; <em>wishful thinking</em> &mdash; led her to an <em>extra-rule</em> error: a belief that pressing on different sides of the spacebar would steer the avatar left or right. She engaged in <em>manner modification</em>, physically pressing on the left or right side of the key to signal her intentions to a system that was insensitive to these differences. Sometimes the avatar went the way she wanted. She asked whether there was a connection.
+        </p>
+
+        <p class="participant-quote">
+          &ldquo;In my mind, I&rsquo;m feeling if I [press on the left] it will go left and if
+          I [press on the right] it will go right.&rdquo;
+        </p>
+
+        <figure class="finding-figure">
+          <img src="/images/P3 Spacebar.png" alt="Three panels are shown and each features text explaining what they depict. Below this text, boxes naming the concept and category that these panels illustrate are linked by arrows, representing how each affects the next. In the first panel, the Spelunky avatar is running to the right away from gold. The explanatory text reads: P3 wanted to control her avatar's movement direction. The classification box reads: Wishful Thinking is one of the Sources of Confusion. In the second panel, the Spelunky avatar is further from the gold. The explanatory text reads: P3 believed that she could guide her avatar's movement. The classification box reads: Extra-Rule is one of the Types of Mental Model Errors. In the third panel, the Spelunky avatar is running towards the gold and a bubble that reads spacebar is displayed. The bubble represents P3 pressing on the left side of the spacebar so the space in spacebar is bolded and italicized, while the bar is not. The explanatory text reads: P3 pressed on the left side of the spacebar, to make it go left, and the right side of the spacebar, to make it go right. The classification box reads: Manner Modification is one of the Behaviours Resulting from Confusion.">
+        </figure>
+
+        <p>
+          These three cases &mdash; a false hypothesis confirmed by coincidence, confusion so complete that failure goes unnoticed, and a superstition drawn from desire &mdash; illustrate how the theory&rsquo;s categories interact. Users&rsquo; desires and expectations produce behaviors that generate feedback that creates and reinforces mental model errors. Attitudes determine whether users attempt to improve their understanding and how they engage with feedback. Users who cannot make the AI do what they want do not always conclude that the AI is incapable. If they have need and are persistent, they discover methods that may only appear to have the desired effects.
+        </p>
+
+        <p class="participant-quote">
+          &ldquo;Unless I have opportunities I don&rsquo;t know about&hellip; If she&rsquo;s not trustworthy then I&rsquo;m like &lsquo;uh, am I missing something in the game? Is there another key that I have access to that I don&rsquo;t know about?&rsquo;&rdquo;
+        </p>
+
+        <p class="paper-cite">
+          <a href="https://dl.acm.org/doi/10.1145/3544548.3581116">Automation Confusion:
+          A Grounded Theory of Non-Gamers&rsquo; Confusion in Partially Automated
+          Action Games</a>
+          &mdash; Cimolino, Chen, Gutwin, Graham. <em>CHI 2023.</em> 8 citations.
+        </p>
+      </div>
+
+      <!-- ── Section 4 ───────────────────────────────────────────── -->
+      <div class="research-section">
+        <h2>Similar mechanisms appear in generative AI</h2>
+
+        <p>
+          The categories that constitute automation confusion are not specific to games or shared control. A study adapted Stable Diffusion into a game in which players tried to generate images of Superman without using the word &ldquo;Superman.&rdquo; Players crafted prompts based on what they believed the AI should know &mdash; drawing on their own knowledge of the character&rsquo;s costume, cultural references, and portraying actors to hypothesize what the model would recognize. When prompts failed, some players blamed deficiencies in the AI rather than revise their model of how it worked. Other players collaboratively engineered their prompts; they discovered what the AI seemed to know and hypothesized that prompt lengths and the types of information in their prompts affected the AI's output.
+        </p>
+
+        <figure class="finding-figure" style="max-width: var(--measure);">
+          <img style="max-width: 50%;margin: 0 auto;" src="/images/Henry Cavill wearing blue super suit with a big s on the chest and a red cape.png" alt="Henry Cavill wearing blue super suit with a big s on the chest and a red cape">
+        </figure>
+
+        <p class="participant-quote">
+          &ldquo;Henry Cavill wearing blue super suit with a big s on the chest and a red cape&rdquo;
+        </p>
+
+        <p>
+          The wishful thinking, inherited expectations, and incorrect mappings that produced confusion in partially automated games may also operate in users&rsquo; reasoning about the knowledge and capabilities of generative models and how to invoke them. The domain changes; the mechanisms may not.
+        </p>
+
+        <p class="paper-cite">
+          <a href="https://dl.acm.org/doi/10.1145/3582437.3587198">Playing with Dezgo: Adapting Human-AI Interaction to the Context of Play</a>
+          &mdash; Villareale, Cimolino, Gomme. <em>FDG 2023.</em> 10 citations.
+        </p>
+      </div>
+
+      <!-- ── Section 5 ───────────────────────────────────────────── -->
+      <div class="research-section">
+        <h2>Where this points</h2>
+
+        <p>My PhD research established a grounded theory of automation confusion: how users form false beliefs about AI systems despite corrective information. This work has led me to believe that the problem isn't that users misunderstand their AI assistants, but that AI lacks the intelligence needed to understand human users.</p>
+
+        <p>I now want to engineer AI capable of empathy — the ability to understand users deeply, detect confusion latent in users' inputs, and act in ways that are faithful to users' unstated needs. This moves beyond processing user input to modeling user cognition: recognizing when input is incomplete, predicting what the user actually wants rather than what they ask for, and integrating these models into production AI systems.</p>
+
+        <p>I am not a designer. I apply scientific knowledge to the construction of AI systems. My background in human-AI interaction, AI engineering, and cognitive science is directly applicable to AI research roles where I will deploy these systems in production — making empathetic AI a standard component of production systems.</p>
+
+      </div>
+
+    </main>
+
+    <footer>
+      <span>Gabriele Cimolino, PhD &mdash; Halifax, NS</span>
+      <span class="footer-links">
+        <a href="https://github.com/gabrielecimolino">GitHub</a>
+        <a href="https://www.linkedin.com/in/gabriele-cimolino/">LinkedIn</a>
+        <a href="mailto:gabrielecimolino@gmail.com">Email</a>
+        <a href="https://scholar.google.com/citations?user=f0xJPVYAAAAJ">Scholar</a>
+      </span>
+    </footer>
+
+  </div>
+</body>
+</html>
